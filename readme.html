@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>JPID - Java Partial Information Decomposition toolkit</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<!-- link rel="stylesheet" href="../styles.css" type="text/css" -->
+</head>
+
+<body> <!-- leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" -->
+
+<h1>Java Partial Information Decomposition</h1>
+
+<p>
+A Java software toolkit for computing partial information decomposition (PID) - both on average and on a local scale.
+</p>
+
+<p>
+This document describes the usage for this toolkit. It is included in the distribution as readme.html.
+</p>
+
+<p>
+Copyright (C) 2012 Joseph Lizier (joseph.lizier at gmail.com) and Benjamin Flecker<br/>
+</p>
+
+<h2>License</h2>
+<p>
+Licensed under <a href="http://www.gnu.org/licenses/gpl.html">GNU General Public License v3</a> or any later version - see <font face="courier">license-gplv3.txt</font> included in the distribution.
+</p>
+
+<h2>Dependencies</h2>
+<p>
+<ul>
+	<li>JUnit 3 - main toolkit code does not require this, but you will need it to run unit tests</li>
+</ul>
+</p>
+
+
+<h2>Referencing/Acknowledgement</h2>
+<p>
+You are asked to reference your use of this toolkit in any resulting publications to the following:
+<ul>
+ <li>Joseph T. Lizier and Benjamin Flecker, "Java Partial Information Decomposition toolkit", 2012;</li>
+ <!-- We won't mention the paper we're working on here for the moment. -->
+</ul>
+You should also reference the underlying PID method to the original paper:
+<ul>
+ <li>Paul L. Williams and Randall D. Beer, "Nonnegative Decomposition of Multivariate Information", <a href="http://arxiv.org/abs/1004.2515">arXiv:1004.2515</a>, 2010.</li>
+</ul>
+</p>
+
+<!--h2>Download</h2>
+<p>
+Download the most recent distribution of the toolkit <a href="??">here</a>
+</p-->
+
+<h2>Usage</h2>
+
+<p>
+<b>Structure</b>: The distribution is structured as follows:
+<ol>
+	<li><font face="courier">java/source</font> - source files for the toolkit.</li>
+	<li><font face="courier">java/javadocs</font> - Javadocs for the toolkit.</li>
+	<li><font face="courier">java/unittests</font> - JUnit tests for the toolkit.</li>
+	<li><font face="courier">python</font> - code to run demonstration applications calling the java toolkit.</li>
+	<li><font face="courier">readme.html</font> - this html file</li>
+	<li><font face="courier">license-gplv3</font> - GNU General Public License v3.</li>
+</ol>
+</p>
+
+<p>
+<b>Using the toolkit</b>: main use of the toolkit is via the class <font face="courier">partialinfodecomp.discrete.PartialInfoDecomposer</font>. One would typically call its methods in the following order:
+<ol>
+	<li>Construct, e.g.: <font face="courier">PartialInfoDecomposer pid = new PartialInfoDecomposer(int, int[])</font></li>
+	<li>Provide observations (these can be accumulated, i.e. added multiple times):
+		<ol>
+			<li><font face="courier">pid.addObservations(int[], int[][])</font></li>
+			<li><font face="courier">pid.addObservation(int, int[])</font></li>
+		</ol>
+	</li>
+	<li>Compute required Imin and PI entities (all returned in bits):
+		<ol>
+			<li><font face="courier">pid.Imin(NodeOfElements)</font></li>
+			<li><font face="courier">pid.PI(NodeOfElements)</font></li>
+		</ol>
+	</li>
+	<li>Re-initialise (then start adding observations again): <font face="courier">pid.initialise()</font></li>
+</ol>
+</p>
+
+<p>
+<b>Sample code</b>:
+A sample application of the code is provided in the python directory ...
+</p>
+
+<hr/>
+<p class="footer"><a href="mailto:lizier at mis dot mpg dot de">Joe Lizier</a> and Benjamin Flecker, Last Updated 07/05/2012.</p>
+
+</body>
+</html>
+
