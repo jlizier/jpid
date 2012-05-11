@@ -35,7 +35,8 @@ Download the most recent distribution of the toolkit from [github](https://githu
 Usage
 -----
 
-**Structure:** The distribution is structured as folllows:
+**Structure:** The distribution is structured as follows:
+
 1. **java/source** - source files for the toolkit.
 2. **java/javadocs** - Javadocs for the toolkit.
 3. **java/unittests** - JUnit tests for the toolkit.
