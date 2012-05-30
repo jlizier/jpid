@@ -49,7 +49,7 @@ import java.util.Arrays;
  * </p>
  *  
  * @author Ben Flecker and Joseph Lizier<br/>
- * Ben enter email and web site here if you want?<br/>
+ * <a href="mailto:btflecker at gmail.com">btflecker at gmail.com</a><br/>
  * <a href="mailto:joseph.lizier at gmail.com">joseph.lizier at gmail.com</a><br/>
  * <a href="http://lizier.me/joseph/">http://lizier.me/joseph/</a>
  *
