@@ -67,7 +67,9 @@ Usage
 Sample code
 -----------
 
-A sample application of the code is provided in the python directory (to be added at a later date)
+Simple examples can be seen in the unittests/partialinfodecomp/discrete/PartialInfoDecomposerTester.java unit test.
+
+A more detailed sample application of the code is provided in the python directory (to be added at a later date)
 
 Contact
 -------
